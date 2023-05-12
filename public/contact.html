@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        #contact {
+            position: relative;
+        }
+
+        #contact::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            opacity: 0.7;
+            background: url('../contact.jpg') no-repeat center center/cover;
+
+        }
+
+        #contact-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding-bottom: 34px;
+        }
+
+        #contact-box input,
+        #contact-box textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border-radius: 9px;
+            font-size: 1.1rem;
+        }
+
+        #contact-box form {
+            width: 40%;
+        }
+
+        #contact-box label {
+            font-size: 1.3rem;
+            font-family: 'Bree Serif', serif;
+
+        }
+
+        #type-input {
+            margin: 23px;
+            
+        }
+
+        .h-primary {
+            text-align: center;
+            color:rgb(250, 58, 58) ;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="contact">
+        <h1 class="h-primary center">Here to buy the course:-</h1>
+        <div id="contact-box">
+            <form action="https://formsubmit.co/golukumar999935@gmail.com" method="POST">
+                <label for="">Name:</label>
+                <input type="text" name="name" placeholder="Enter your name" required>
+                <label for="">phone:</label>
+                <input type="phone" name="phone" placeholder="Enter your phone" required>
+                <label for="">Email:</label>
+                <input type="email" name="email" placeholder="Enter your Email" required>
+
+                <label for="browser">Choose your course list:</label>
+                <input list="browsers" name="browser" id="browser">
+                <datalist id="browsers">
+                    <option value="JAVA">
+                    <option value="JAVASCRIPT">
+                    <option value="PYTHON">
+                    <option value="C++">
+                    <option value="REACT.JS">
+                    <option value="NODE.JS">
+                    <option value="MONGODB">
+                    <option value="HTML">
+                    <option value="CSS">
+                    <option value="JQUERY">
+                    <option value="SASS">
+                </datalist>
+                <input type="submit" id="type-input">
+                <textarea name="massage" id="" cols="30" rows="10" placeholder="Massage:--" required></textarea>
+                <button class="btn" type="submit">Send</button>
+            </form>
+
+        </div>
+    </section>
+</body>
+
+</html>
